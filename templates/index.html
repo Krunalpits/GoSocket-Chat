@@ -2,17 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Select a Chat Room and get started !</title>
+  <title>GoSocket Chat</title>
   <link rel="stylesheet" href="/static/css/styles.css" />
 </head>
 <body class="index-body">
-  <h1>Join a Chat Room</h1>
-  <form action="/chat" method="get">
-    <input type="text" name="room" placeholder="Enter channel name..." required />
-    <button type="submit">Join</button>
-  </form>
-
-  <!-- Optional: index.js if you want any client JS here -->
-  <script src="/static/js/index.js"></script>
+  <div class="index-wrap">
+    <div class="logo-mark">
+      <svg viewBox="0 0 18 18" fill="none" width="22" height="22">
+        <circle cx="9" cy="9" r="3.5" fill="white" opacity="0.9"/>
+        <path d="M9 1.5V5M9 13V16.5M1.5 9H5M13 9H16.5" stroke="white" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+        <path d="M4.2 4.2L6.5 6.5M11.5 11.5L13.8 13.8M13.8 4.2L11.5 6.5M6.5 11.5L4.2 13.8" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+    </div>
+    <h1>GoSocket Chat</h1>
+    <p class="index-sub">Real-time messaging powered by Go + WebSockets</p>
+    <div class="index-tags">
+      <span class="tag tgo">Go 1.26</span>
+      <span class="tag tws">WebSocket</span>
+      <span class="tag tgr">Goroutines</span>
+    </div>
+    <form action="/chat" method="get" class="index-form">
+      <input type="text" name="room" placeholder="Enter channel name..." required />
+      <button type="submit">Join Channel</button>
+    </form>
+    <p class="index-hint">sub-5ms latency · hub-and-spoke broadcast · zero race conditions</p>
+  </div>
 </body>
 </html>
